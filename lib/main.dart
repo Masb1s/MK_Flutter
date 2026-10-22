@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'task1/library_task.dart';
 import 'task2/rating_screen.dart';
 import 'task3/home_screen.dart';
+import 'task4/weather_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,19 +80,19 @@ class MainMenu extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.cloud),
-            title: const Text('Завдання 4'),
-            subtitle: const Text('Future та Stream'),
-            onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text(
-                    'Task 4 буде додано пізніше',
-                  ),
-                ),
-              );
-            },
-          ),
+           leading: const Icon(Icons.cloud),
+           title: const Text('Завдання 4'),
+           subtitle: const Text('Future та Stream'),
+           onTap: () {
+           Navigator.push(
+           context,
+           MaterialPageRoute( 
+           builder: (_) =>
+           const WeatherScreen(),
+            ),
+           );
+          },
+         ),
         ],
       ),
     );
