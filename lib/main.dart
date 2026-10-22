@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'task1/library_task.dart';
 import 'task2/rating_screen.dart';
+import 'task3/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,7 +72,7 @@ class MainMenu extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const Task3Screen(),
+                  builder: (_) => const HomeScreen(),
                 ),
               );
             },
@@ -93,18 +94,6 @@ class MainMenu extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class Task3Screen extends StatelessWidget {
-  const Task3Screen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Завдання 3')),
-      body: const Center(child: Text('Навігація')),
     );
   }
 }
