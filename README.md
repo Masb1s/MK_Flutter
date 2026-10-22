@@ -1,17 +1,95 @@
-# mkflutter
+# Модульна контрольна робота з Dart та Flutter
 
-A new Flutter project.
+## Мета роботи
 
-## Getting Started
+Продемонструвати практичні навички роботи з мовою Dart та фреймворком Flutter:
+створення класів та робота з колекціями;
+розробка власних віджетів;
+керування станом застосунку;
+навігація між екранами;
+використання асинхронного коду (`Future`, `Stream`).
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+### Завдання 1. Основи Dart: класи та колекції
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Реалізовано ієрархію класів бібліотеки:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+`LibraryItem`
+`Book`
+`Magazine`
+`Library`
+
+Функціональність:
+додавання книг і журналів;
+пошук елементів за роком видання;
+отримання описів усіх елементів;
+пошук найстарішого елемента;
+обробка некоректного введення даних.
+
+---
+
+### Завдання 2. Власний Stateless-віджет
+
+Створено багаторазовий віджет `RatingBadge`.
+Можливості:
+
+відображення рейтингу;
+відображення додаткового підпису;
+зміна кольору залежно від рейтингу;
+округлення значення до одного знака після коми;
+перевірка діапазону рейтингу.
+
+---
+
+### Завдання 3. State Management та навігація
+
+Реалізовано два екрани:
+
+#### HomeScreen
+
+відображення лічильника;
+збільшення значення через `setState()`;
+перехід на другий екран через `Navigator.push()`.
+
+#### DetailScreen
+
+отримання значення через конструктор;
+відображення отриманих даних;
+повернення через `Navigator.pop()`.
+
+Стан лічильника після повернення на головний екран зберігається.
+
+---
+
+### Завдання 4. Асинхронний код
+
+Створено клас `WeatherService`.
+Реалізовано:
+`Future<Map<String, dynamic>> fetchCurrentWeather()`
+`Stream<int> temperatureUpdates()`
+
+Продемонстровано використання:
+
+`async / await`;
+`try-catch`;
+`Future.delayed`;
+`async*`;
+`yield`;
+`await for`.
+
+---
+
+## Технології
+
+Dart
+Flutter
+Material Design
+
+---
+
+## Запуск проєкту
+
+```bash
+flutter pub get
+flutter run
